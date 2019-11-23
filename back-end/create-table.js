@@ -33,3 +33,11 @@ function addRows(conn) {
         conn.end();//fecha a conexão
     });
 }
+
+//Conecta no MySQL executando as duas funções acima:
+connection.connect(function (err) {
+    if (err) return console.log(err);
+    console.log('Funções executadas no MySQL!');
+    createTable(connection);
+    addRows(connection);
+})

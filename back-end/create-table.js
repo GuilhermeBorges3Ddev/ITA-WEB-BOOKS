@@ -41,3 +41,16 @@ connection.connect(function (err) {
     createTable(connection);
     addRows(connection);
 })
+
+
+//A execução das queries devem ficar no final do arquivo
+function execSQLQuery(sqlQry, res) {
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        port: 3306,
+        user: 'root',
+        password: 'password',
+        database: 'sandvigbookstore'
+    }
+    )
+}

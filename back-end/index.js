@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const port = 3000; //porta padrão para a API Node.JS
 const mysql = require('mysql');
 
-//configurando o body parser para pegar POSTS mais tarde
+//configurando o body parser para pegar o parse das rotas
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -23,24 +23,21 @@ app.use('/', router);
 app.listen(port);
 console.log('API funcionando!');
 
-//GET trazendo do banco as categorias disponíveis
-router.get('/categorias', (req, res) => {
-    execSQLQuery('SELECT * FROM bookcategories;', res);
+//GET da caixa de buscas por titulo, categoria, descrição ou editora
+router.get('/buscar/:textUser?', (req, res) => {
+    let filterPartOne = '';
+    filterPartOne = ' WHERE a.AuthorID = ba.AuthorID AND ba.ISBN = d.ISBN AND d.ISBN = cb.ISBN AND c.CategoryID = cb.CategoryID';
+
+    let filterPartTwo = '';
+    if (req.params.textUser) filterPartTwo = ` AND (c.CategoryName = '%${req.params.textUser}%' OR d.title LIKE '%${req.params.textUser}%' OR d.description LIKE '%${req.params.textUser}%' OR d.publisher LIKE '%${req.params.textUser}%' OR concat_ws(' ', nameF, nameL, nameF) LIKE '%${req.params.textUser}%')`;
+    execSQLQuery('SELECT DISTINCT d.isbn, d.title, d.description, d.price FROM bookauthors a, bookauthorsbooks ba, bookdescriptions d, bookcategoriesbooks cb, bookcategories c' + filterPartOne + filterPartTwo, res);
 });
 
-//parametros influenciando GET com Where
-router.get('/buscar/:CategoryID?', (req, res) => {
+//GET da Navbar, que cada Link retorna os livros da categoria
+router.get('/listar/:CategoryID?', (req, res) => {
     let filter = '';
-    if (req.params.CategoryID) filter = ' WHERE CategoryID=' + parseInt(req.params.CategoryID);
-    execSQLQuery('SELECT * FROM  bookcategoriesbooks' + filter, res);
-});//essa busca é a dos livros por categoria
-
-//rota com POST para testar inserção de livros
-router.post('/adicionarLivro', (req, res) => {
-    const ISBN = req.body.ISBN.substring(0, 10);
-    const title = req.body.title.substring(0, 120);
-    execSQLQuery(
-        'INSERT INTO bookdescriptions(ISBN, title) VALUES('`${ISBN}` + ',' + `${title}` + ')', res);
+    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID);
+    execSQLQuery('SELECT d.title, d.description FROM bookdescriptions d, bookcategoriesbooks c' + filter, res);
 });
 
 //A execução das queries devem ficar no final do arquivo

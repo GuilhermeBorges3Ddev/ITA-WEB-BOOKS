@@ -28,6 +28,11 @@ body {
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;
   }
+
+  .search-area {
+      width: 450px;
+      padding-top: 4px;
+  }
   
   @media (min-width: 768px) {
     #sidebar-wrapper {

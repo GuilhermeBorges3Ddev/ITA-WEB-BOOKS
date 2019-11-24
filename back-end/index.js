@@ -23,6 +23,14 @@ app.use('/', router);
 app.listen(port);
 console.log('API funcionando!');
 
+
+//GET de exibição de 4 livros aleatórios no <body>
+router.get('/exibir', (req, res) => {
+    let orderLimit = "";
+    orderLimit = " ORDER BY RAND() LIMIT 3;";
+    execSQLQuery('SELECT title, description FROM bookdescriptions' + orderLimit, res);
+});
+
 //GET da caixa de buscas por titulo, categoria, descrição ou editora
 router.get('/buscar/:textUser?', (req, res) => {
     let filterPartOne = '';

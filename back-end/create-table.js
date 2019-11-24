@@ -51,6 +51,14 @@ function execSQLQuery(sqlQry, res) {
         user: 'root',
         password: 'password',
         database: 'sandvigbookstore'
-    }
-    )
+    });
+    connection.query(sqlQry, function (error, results, fields) {
+        if (error)
+            res.json(error);
+        else
+            res.json(results);
+        connection.end();
+        console.log('Query executada!');
+    });
 }
+

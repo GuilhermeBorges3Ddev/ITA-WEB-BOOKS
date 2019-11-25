@@ -37,7 +37,7 @@ app.use(cors());
 router.get('/', (req, res) => {
     let orderLimit = "";
     orderLimit = " ORDER BY RAND() LIMIT 3;";
-    execSQLQuery('SELECT title, SubString(description, 50) as description FROM bookdescriptions' + orderLimit, res);
+    execSQLQuery('SELECT substr(title, 1, 42) as title, substr(description, 8, 100) as description FROM bookdescriptions' + orderLimit, res);
 });
 
 //GET da caixa de buscas por titulo, categoria, descrição ou editora

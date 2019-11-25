@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const port = 3000; //porta padrão para a API Node.JS
@@ -18,6 +19,14 @@ router.get('/', (req, res) => res.json(
     }
 ));
 app.use('/', router);
+
+//Config do CORS
+var corsOptions = {
+    origin: 'http://localhost:3000/',
+    optionSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
 
 //inicia o servidor
 app.listen(port);

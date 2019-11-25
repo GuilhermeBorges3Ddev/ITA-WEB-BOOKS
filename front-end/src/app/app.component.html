@@ -1,7 +1,7 @@
 <div class="row d-flex w-100 h-100 pt-0" id="book-return">
   <div class="col-4" *ngFor="let message of messages | async">
     <div class="card" style="height: 450px !important;">
-      <img src="https://baldochi.unifei.edu.br/COM222/trabfinal/imagens/0131428985.01.MZZZZZZZ.jpg"
+      <img src="https://baldochi.unifei.edu.br/COM222/trabfinal/imagens/{{message.ISBN}}.01.MZZZZZZZ.jpg"
         class="card-img pt-3" alt="..." style="max-height: 130px; max-width: 140px; align-self: center;">
       <div class="card-body">
         <h5 class="card-title" style="max-height: 80px;">{{message.title}} ...</h5>
@@ -13,7 +13,3 @@
     </div>
   </div>
 </div>
-
-<!--
-../assets/images/150.png
--->

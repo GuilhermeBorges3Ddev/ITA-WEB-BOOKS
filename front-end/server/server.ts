@@ -2,10 +2,12 @@ const express = require('express');
 const mysql = require('mysql');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 //configurando o body parser para pegar o parse das rotas
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 //definindo as rotas com express
 const router = express.Router();
@@ -27,17 +29,16 @@ app.use((req, res, next) => {
 app.listen(4201, 'localhost', function () {
     console.log("Server routes are running on 4201");
 });
-
 app.use(express.json());
-
+app.use('/', router);
+app.use(cors());
 
 //GET padrão configurado
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     let orderLimit = "";
     orderLimit = " ORDER BY RAND() LIMIT 3;";
-    execSQLQuery('SELECT title, description FROM bookdescriptions' + orderLimit, res);
+    execSQLQuery('SELECT title, SubString(description, 50) as description FROM bookdescriptions' + orderLimit, res);
 });
-app.use('/', router);
 
 //GET da caixa de buscas por titulo, categoria, descrição ou editora
 router.get('/buscar/:textUser?', (req, res) => {

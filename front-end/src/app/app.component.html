@@ -1,5 +1,17 @@
-<ul>
-  <li *ngFor="let message of messages | async">
-    {{message.message}}
-  </li>
-</ul>
+<div class="row w-100 pt-0" id="book-return">
+  <div class="col-4" *ngFor="let message of messages | async">
+    <div class="card" style="height: 450px !important;">
+      <img src="../assets/images/150.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{message.title}}</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+        <a href="#" class="btn btn-primary">Ver mais</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{message.title}}
+<!-- {{message.description}}
+<a href="#" class="btn btn-primary">Ver mais</a> -->

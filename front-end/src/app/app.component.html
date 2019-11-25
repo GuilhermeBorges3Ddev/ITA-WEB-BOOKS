@@ -1,17 +1,19 @@
-<div class="row w-100 pt-0" id="book-return">
+<div class="row d-flex w-100 h-100 pt-0" id="book-return">
   <div class="col-4" *ngFor="let message of messages | async">
     <div class="card" style="height: 450px !important;">
-      <img src="../assets/images/150.png" class="card-img-top" alt="...">
+      <img src="../assets/images/150.png" class="card-img-top" alt="..." style="max-height: 140px;">
       <div class="card-body">
-        <h5 class="card-title">{{message.title}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        <h5 class="card-title" style="max-height: 80px;">{{message.title}}</h5>
+        <p class="card-text pt-5" style="max-height: 180px;">
+          Some quick example text to build on the card title and
+          makeup
+          the bulk of the card's
           content.</p>
-        <a href="#" class="btn btn-primary">Ver mais</a>
+        <a href="#" class="btn btn-primary" style="max-height: 50px;">Ver mais</a>
       </div>
     </div>
   </div>
 </div>
 
-{{message.title}}
 <!-- {{message.description}}
 <a href="#" class="btn btn-primary">Ver mais</a> -->

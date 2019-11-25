@@ -27,6 +27,10 @@ body {
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;
   }
+
+  #book-return {
+    max-height: 50% !important;
+  }
   
   @media (min-width: 768px) {
     #sidebar-wrapper {

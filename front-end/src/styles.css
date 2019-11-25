@@ -32,6 +32,10 @@ body {
   #page-content-wrapper {
     min-width: 100vw;
   }
+
+  #books-area {
+    margin-top: 10%;
+  }
   
   #wrapper.toggled #sidebar-wrapper {
     margin-left: 0;

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class categoriaAsp implements OnInit {
 
-  bookscats = this.http.get<any[]>('http://localhost:4201/listar/5?');
+  bookscats = this.http.get<any[]>('http://localhost:4201/listar/5');
 
   constructor(private http: HttpClient) { }
 

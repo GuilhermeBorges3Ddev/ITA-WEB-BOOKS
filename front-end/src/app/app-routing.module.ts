@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMysql.component';
 import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
 import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
+import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'listarMysql', component: CategoriaMysqlComponent},
   {path: 'listarPhp', component: categoriaPhp},
   {path: 'listarRegex', component: categoriaRegex},
+  {path: 'listarSql', component: categoriaSql},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

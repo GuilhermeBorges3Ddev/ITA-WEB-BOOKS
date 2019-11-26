@@ -53,7 +53,7 @@ router.get('/buscar/:textUser?', (req, res) => {
 //GET da Sidebar, que cada Link retorna os livros da categoria
 router.get('/listar/:CategoryID?', (req, res) => {
     let filter = '';
-    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID) + ' AND b.CategoryID = c.CategoryID GROUP BY(c.ISBN) LIMIT 2;';
+    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID) + ' AND b.CategoryID = c.CategoryID GROUP BY(c.ISBN) ORDER BY RAND() LIMIT 2;';
     execSQLQuery('SELECT d.title, substr(d.description, 8, 250) as description, COUNT(c.ISBN) AS qtd, b.CategoryName as categoria, c.ISBN as ISBN FROM bookdescriptions d, bookcategoriesbooks c, bookcategories b ' + filter, res);
 });
 

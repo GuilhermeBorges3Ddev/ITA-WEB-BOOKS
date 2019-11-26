@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 
 //Comunicando nosso front com o arquivo de backend "server.ts"
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { HomeComponent } from './home/home.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent
+    HomeComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

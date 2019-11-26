@@ -9,6 +9,7 @@ import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMy
 import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
 import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
 import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
+import { categoriaWebUsability } from './categorias/categoriaWebUsability/categoriaWebUsability.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'listarPhp', component: categoriaPhp},
   {path: 'listarRegex', component: categoriaRegex},
   {path: 'listarSql', component: categoriaSql},
+  {path: 'listarWebUsability', component: categoriaWebUsability},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

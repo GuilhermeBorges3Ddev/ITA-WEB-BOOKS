@@ -14,6 +14,7 @@ import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMy
 import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
 import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
 import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
+import { categoriaWebUsability } from './categorias/categoriaWebUsability/categoriaWebUsability.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
     CategoriaMysqlComponent,
     categoriaPhp,
     categoriaRegex,
-    categoriaSql
+    categoriaSql,
+    categoriaWebUsability
   ],
   imports: [
     BrowserModule,

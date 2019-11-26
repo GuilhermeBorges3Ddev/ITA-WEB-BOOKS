@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 //Componentes roteados
 import { HomeComponent } from './home/home.component';
-import { CategoriesComponent } from './categories/categories.component';
+import { categoriaAsp } from './categoriaAsp/categoriaAsp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'buscar/1', component: CategoriesComponent},
+  {path: 'listarAsp', component: categoriaAsp},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

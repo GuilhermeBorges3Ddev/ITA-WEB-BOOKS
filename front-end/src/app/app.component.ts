@@ -12,9 +12,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'front-end';
-
   messages = this.http.get<any[]>('http://localhost:4201');
+  navbarOpen = false;
 
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
   constructor(private http: HttpClient) { }
 
   get() {

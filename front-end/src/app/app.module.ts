@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { categoriaAsp } from './categorias/categoriaAsp/categoriaAsp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMysql.component';
+import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMy
     HomeComponent,
     categoriaAsp,
     PageNotFoundComponent,
-    CategoriaMysqlComponent
+    CategoriaMysqlComponent,
+    categoriaPhp
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import { categoriaAsp } from './categorias/categoriaAsp/categoriaAsp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMysql.component';
 import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
+import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
     categoriaAsp,
     PageNotFoundComponent,
     CategoriaMysqlComponent,
-    categoriaPhp
+    categoriaPhp,
+    categoriaRegex
   ],
   imports: [
     BrowserModule,

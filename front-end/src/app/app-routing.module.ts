@@ -7,12 +7,14 @@ import { categoriaAsp } from './categorias/categoriaAsp/categoriaAsp.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriaMysqlComponent } from './categorias/categoriaMysql/categoriaMysql.component';
 import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
+import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'listarAsp', component: categoriaAsp},
   {path: 'listarMysql', component: CategoriaMysqlComponent},
   {path: 'listarPhp', component: categoriaPhp},
+  {path: 'listarRegex', component: categoriaRegex},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

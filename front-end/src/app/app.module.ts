@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

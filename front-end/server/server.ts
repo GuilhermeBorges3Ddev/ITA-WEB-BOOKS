@@ -53,8 +53,8 @@ router.get('/buscar/:textUser?', (req, res) => {
 //GET da Sidebar, que cada Link retorna os livros da categoria
 router.get('/listar/:CategoryID?', (req, res) => {
     let filter = '';
-    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID) + ' GROUP BY(c.ISBN)';
-    execSQLQuery('SELECT d.title, d.description, COUNT(c.ISBN) AS qtd FROM bookdescriptions d, bookcategoriesbooks c' + filter, res);
+    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID) + ' AND b.CategoryID = c.CategoryID GROUP BY(c.ISBN)';
+    execSQLQuery('SELECT d.title, d.description, COUNT(c.ISBN) AS qtd, b.CategoryName as categoria FROM bookdescriptions d, bookcategoriesbooks c, bookcategories b ' + filter, res);
 });
 
 //A execução das queries devem ficar no final do arquivo

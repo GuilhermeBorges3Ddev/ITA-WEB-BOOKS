@@ -50,11 +50,11 @@ router.get('/buscar/:textUser?', (req, res) => {
     execSQLQuery('SELECT DISTINCT d.isbn, d.title, d.description, d.price FROM bookauthors a, bookauthorsbooks ba, bookdescriptions d, bookcategoriesbooks cb, bookcategories c' + filterPartOne + filterPartTwo, res);
 });
 
-//GET da Navbar, que cada Link retorna os livros da categoria
+//GET da Sidebar, que cada Link retorna os livros da categoria
 router.get('/listar/:CategoryID?', (req, res) => {
     let filter = '';
-    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID);
-    execSQLQuery('SELECT d.title, d.description FROM bookdescriptions d, bookcategoriesbooks c' + filter, res);
+    if (req.params.CategoryID) filter = ' WHERE c.ISBN = d.ISBN AND c.CategoryID=' + parseInt(req.params.CategoryID) + ' AND b.CategoryID = c.CategoryID GROUP BY(c.ISBN) ORDER BY RAND() LIMIT 2;';
+    execSQLQuery('SELECT d.title, substr(d.description, 8, 250) as description, COUNT(c.ISBN) AS qtd, b.CategoryName as categoria, c.ISBN as ISBN FROM bookdescriptions d, bookcategoriesbooks c, bookcategories b ' + filter, res);
 });
 
 //A execução das queries devem ficar no final do arquivo

@@ -1,110 +1,19 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>Itajubá Web Books</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <!-- Font Awesome CDN -->
   <script src="https://kit.fontawesome.com/d6fa7a24a5.js" crossorigin="anonymous"></script>
-
 </head>
-
-
 <body>
-
-  <div class="d-flex" id="wrapper">
-
-    <!-- Sidebar -->
-    <div class="bg-warning border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading pt-3">
-        <i class="fas fa-book-reader fa-1x mr-2"></i>
-        <strong>Ita Web Books</strong>
-      </div>
-      <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          ASP.NET
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          JavaScript
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          MySQL
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          PHP
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          Regular Expressions
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          SQL
-        </a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white border border-light">
-          Web Usability
-        </a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-warning border-bottom pt-2">
-        <button class="btn btn-dark" id="menu-toggle">Esconder menu lateral</button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mt-2 mt-lg-0 ml-3">
-            <div class="input-group search-area">
-              <input type="text" class="form-control" placeholder="Pesquise um livro pelo título, editora ou categoria">
-              <div class="input-group-append">
-                <button class="btn btn-dark" type="button">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-end mt-1" id="account-cart">
-              <button class="btn btn-dark" type="button">
-                <i class="fas fa-user-circle fa-1x"></i>
-              </button>
-              <button class="btn btn-dark ml-3" type="button">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-            </div>
-          </ul>
-        </div>
-      </nav>
-
-      <!-- 3 livros randômicos paginados por vez -->
-      <div class="container-fluid mt-0">
-        <div class="d-flex justify-items-center align-items-center pt-0" id="books-area">
-          <app-root />
-        </div>
-      </div>
-      <!-- fim dos 3 livros randômicos paginados por vez -->
-
-    </div><!-- /#page-content-wrapper -->
-  </div><!-- /#wrapper -->
-
-  <!-- /#page-content-wrapper -->
-  <div id="page-footer-wrapper" class="bg-dark justify-content-between text-white pt-2">
-    <button class="btn btn-link text-white" type="button" href="#">Minha conta</button>
-    <button class="btn btn-link text-white" type="button" href="/">Home</button>
-    <button class="btn btn-link text-white" type="button" href="#">Carrinho</button>
-  </div>
-
+  <app-root></app-root>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -125,9 +34,4 @@
     })
   </script>
 </body>
-
 </html>
-
-
-
-<!--   <app-root></app-root> -->

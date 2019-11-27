@@ -15,6 +15,7 @@ import { categoriaPhp } from './categorias/categoriaPhp/categoriaPhp.component';
 import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.component';
 import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
 import { categoriaWebUsability } from './categorias/categoriaWebUsability/categoriaWebUsability.component';
+import { categoriaWebServices } from './categorias/categoriaWebServices/categoriaWebServices.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { categoriaWebUsability } from './categorias/categoriaWebUsability/catego
     categoriaPhp,
     categoriaRegex,
     categoriaSql,
-    categoriaWebUsability
+    categoriaWebUsability,
+    categoriaWebServices
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ import { categoriaWebServices } from './categorias/categoriaWebServices/categori
 import { categoriaMorseCode } from './categorias/categoriaMorseCode/categoriaMorseCode.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ExibirLivroComponent } from './exibir-livro/exibir-livro.component';
+import { VerificaClienteComponent } from './verifica-cliente/verifica-cliente.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'listarMorseCode', component: categoriaMorseCode},
   {path: 'carrinho', component: CarrinhoComponent},
   {path: 'exibir/:ISBN?', component: ExibirLivroComponent},
+  {path: 'verifica-cliente', component: VerificaClienteComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

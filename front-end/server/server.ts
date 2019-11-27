@@ -40,6 +40,14 @@ router.get('/', (req, res) => {
     execSQLQuery('SELECT substr(title, 1, 42) as title, substr(description, 8, 100) as description, ISBN FROM bookdescriptions' + orderLimit, res);
 });
 
+//GET de exibição completa de um livro
+router.get('/exibir/:ISBN?', (req, res) => {
+    let uniqueFilter = '';
+    uniqueFilter = 'WHERE ISBN = 0321344758;'
+    execSQLQuery('SELECT ISBN, title, description, price, publisher, pubdate, edition, pages FROM bookdescriptions '+ uniqueFilter, res);
+});
+
+
 //GET da caixa de buscas por titulo, categoria, descrição ou editora
 router.get('/buscar/:textUser?', (req, res) => {
     let filterPartOne = '';

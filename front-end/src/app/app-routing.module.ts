@@ -11,6 +11,7 @@ import { categoriaRegex } from './categorias/categoriaRegex/categoriaRegex.compo
 import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
 import { categoriaWebUsability } from './categorias/categoriaWebUsability/categoriaWebUsability.component';
 import { categoriaWebServices } from './categorias/categoriaWebServices/categoriaWebServices.component';
+import { categoriaMorseCode } from './categorias/categoriaMorseCode/categoriaMorseCode.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'listarSql', component: categoriaSql},
   {path: 'listarWebUsability', component: categoriaWebUsability},
   {path: 'listarWebServices', component: categoriaWebServices},
+  {path: 'listarMorseCode', component: categoriaMorseCode},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

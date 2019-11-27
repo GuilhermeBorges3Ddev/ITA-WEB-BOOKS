@@ -1,0 +1,53 @@
+<h4 class="d-flex justify-content-center mt-2"><strong>Visualização completa do livro selecionado:</strong></h4>
+		<div class="card p-3 mt-3">
+			<div class="container-fluid">
+				<div class="wrapper row" *ngFor="let b of books | async">
+
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+                          <div class="tab-pane active" id="pic-1">
+                              <img src="https://baldochi.unifei.edu.br/COM222/trabfinal/imagens/{{b.ISBN}}.01.LZZZZZZZ.jpg" height="270px"/>
+                           </div>
+						</div>
+                    </div>
+                    
+					<div class="details col-md-6">
+						<h3 class="product-title">{{b.title}}</h3>
+						<div class="rating">
+							<div class="stars">
+                                <span class="review-no mr-2"><i>Avaliação dos leitores</i></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+							</div>
+							
+						</div>
+						<p class="product-description">
+                            {{b.description}}... <u><code>!!Compre para ler mais!!</code></u>
+                        </p>
+                    </div>
+
+                    <div class="mt-2">   
+                        <h4 class="price">preço: <span>R$ {{b.price}}</span></h4>
+                        <p class="vote"><strong>Número de páginas:</strong> {{b.pages}}</p>
+                        <p class="vote"><strong>Editora:</strong> {{b.publisher}}</p>
+                        <p class="vote"><strong>ISBN:</strong> {{b.ISBN}}</p>
+                        <p class="vote"><strong>Edição:</strong> {{b.edition}}º</p>
+                        <p class="vote"><strong>Data de publicação:</strong> {{b.pubdate}}</p>
+						
+						<p class="colors">Capa disponível nas cores:
+							<span class="color orange" data-toggle="tooltip" title="Not In store"></span>
+							<span class="color green"></span>
+							<span class="color blue"></span>
+                        </p>
+						<div class="action pt-4">
+							<button class="add-to-cart btn btn-default mr-4" type="button">Adicionar ao carrinho</button>
+							<button class="btn btn-lg bg-danger text-white" type="button"><span class="fa fa-heart"></span> Favoritar</button>
+						</div>
+                    </div>
+                    
+				</div>
+			</div>
+		</div>

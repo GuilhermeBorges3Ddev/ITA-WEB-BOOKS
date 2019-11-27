@@ -18,6 +18,7 @@ import { categoriaWebUsability } from './categorias/categoriaWebUsability/catego
 import { categoriaWebServices } from './categorias/categoriaWebServices/categoriaWebServices.component';
 import { categoriaMorseCode } from './categorias/categoriaMorseCode/categoriaMorseCode.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ExibirLivroComponent } from './exibir-livro/exibir-livro.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     categoriaWebUsability,
     categoriaWebServices,
     categoriaMorseCode,
-    CarrinhoComponent
+    CarrinhoComponent,
+    ExibirLivroComponent
   ],
   imports: [
     BrowserModule,

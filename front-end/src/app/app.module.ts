@@ -21,6 +21,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ExibirLivroComponent } from './exibir-livro/exibir-livro.component';
 import { VerificaClienteComponent } from './verifica-cliente/verifica-cliente.component';
 import { CadastraClienteComponent } from './cadastra-cliente/cadastra-cliente.component';
+import { BuscarComponent } from './buscar/buscar.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CadastraClienteComponent } from './cadastra-cliente/cadastra-cliente.co
     CarrinhoComponent,
     ExibirLivroComponent,
     VerificaClienteComponent,
-    CadastraClienteComponent
+    CadastraClienteComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,

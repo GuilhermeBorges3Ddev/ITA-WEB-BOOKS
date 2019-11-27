@@ -1,0 +1,33 @@
+
+    <div class="row justify-content-center align-self-center mt-3 p-0 mb-0">
+            <h4>Resultados da busca realizada:</h4>
+            <div class="col-12 d-flex justify-content-around mx-auto my-0 py-0">
+                 <div class="error-actions mt-5">
+                     <a routerLink="" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-home">Voltar para a home</span></a>
+                 </div>
+                 <div class="error-actions mt-5">
+                     <a onClick="window.location.href = 'http://localhost:4200/buscar/:searchkey?'" class="btn btn-secondary btn-sm text-white">
+                        <span>Mais resultados</span>
+                    </a>
+                </div> 
+             </div>
+         </div> 
+       
+          <div class="d-flex justify-items-center align-items-center pt-0 mt-5" id="books-area">
+             <div class="row d-flex w-100 h-80 pt-0" id="book-return">
+                 <div class="col-6" *ngFor="let b of bookscats | async">
+                   <div class="card" style="height: 420px !important;">
+                     <img src="https://baldochi.unifei.edu.br/COM222/trabfinal/imagens/{{b.ISBN}}.01.MZZZZZZZ.jpg"
+                       class="card-img pt-3" alt="..." style="max-height: 130px; max-width: 140px; align-self: center;">
+                     <div class="card-body">
+                       <h5 class="card-title" style="max-height: 80px;">{{b.title}} ...</h5>
+                       <p class="card-text pt-4" style="max-height: 180px; font-size:13px">
+                         ... {{b.description}} ...
+                       </p>
+                       <a href="/exibir/{{b.ISBN}}" class="btn btn-primary" style="max-height: 50px;">Ver o livro</a>
+                     </div>
+                   </div>
+                 </div>
+             </div>
+         </div> 
+

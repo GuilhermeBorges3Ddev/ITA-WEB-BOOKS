@@ -1,11 +1,13 @@
 <h4 class="d-flex justify-content-center mt-2"><strong>Visualização completa do livro selecionado:</strong></h4>
 		<div class="card p-3 mt-3">
 			<div class="container-fluid">
-				<div class="wrapper row">
+				<div class="wrapper row" *ngFor="let b of books | async">
 
 					<div class="preview col-md-6">
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
+                          <div class="tab-pane active" id="pic-1">
+                              <img src="https://baldochi.unifei.edu.br/COM222/trabfinal/imagens/{{b.ISBN}}.01.LZZZZZZZ.jpg" />
+                           </div>
 						</div>
                     </div>
                     

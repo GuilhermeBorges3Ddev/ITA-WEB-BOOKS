@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'listarWebServices', component: categoriaWebServices},
   {path: 'listarMorseCode', component: categoriaMorseCode},
   {path: 'carrinho', component: CarrinhoComponent},
-  {path: 'exibir', component: ExibirLivroComponent},
+  {path: 'exibir/:ISBN?', component: ExibirLivroComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

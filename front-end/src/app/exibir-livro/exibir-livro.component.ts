@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-exibir-livro',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExibirLivroComponent implements OnInit {
 
-  constructor() { }
+  books = this.http.get<any[]>('http://localhost:4201/exibir/:ISBN?');
 
-  ngOnInit() {
+  constructor(private http: HttpClient) { }
+
+  get() {
+    this.http.get("http://localhost:4201/exibir/:ISBN?")
   }
+
+  ngOnInit(){}
 
 }

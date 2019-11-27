@@ -20,6 +20,7 @@ import { categoriaMorseCode } from './categorias/categoriaMorseCode/categoriaMor
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ExibirLivroComponent } from './exibir-livro/exibir-livro.component';
 import { VerificaClienteComponent } from './verifica-cliente/verifica-cliente.component';
+import { CadastraClienteComponent } from './cadastra-cliente/cadastra-cliente.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { VerificaClienteComponent } from './verifica-cliente/verifica-cliente.co
     categoriaMorseCode,
     CarrinhoComponent,
     ExibirLivroComponent,
-    VerificaClienteComponent
+    VerificaClienteComponent,
+    CadastraClienteComponent
   ],
   imports: [
     BrowserModule,

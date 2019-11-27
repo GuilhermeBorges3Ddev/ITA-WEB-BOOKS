@@ -12,6 +12,7 @@ import { categoriaSql } from './categorias/categoriaSql/categoriaSql.component';
 import { categoriaWebUsability } from './categorias/categoriaWebUsability/categoriaWebUsability.component';
 import { categoriaWebServices } from './categorias/categoriaWebServices/categoriaWebServices.component';
 import { categoriaMorseCode } from './categorias/categoriaMorseCode/categoriaMorseCode.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'listarWebUsability', component: categoriaWebUsability},
   {path: 'listarWebServices', component: categoriaWebServices},
   {path: 'listarMorseCode', component: categoriaMorseCode},
+  {path: 'carrinho', component: CarrinhoComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent }
 ];

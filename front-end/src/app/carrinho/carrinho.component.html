@@ -1,0 +1,88 @@
+<div class="card mt-3">
+    <table class="table table-hover shopping-cart-wrap">
+        
+        <thead class="text-muted">
+            <tr>
+                <th scope="col" width="220">Produto</th>
+                <th scope="col" width="140">Quantidade</th>
+                <th scope="col" width="120">Preco</th>
+                <th scope="col" width="120">Total</th>
+                <th scope="col" width="180" class="text-right">Confirmar / Deletar </th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>
+                <figure class="media">
+                    <div class="img-wrap">
+                        <i class="fa fa-axis"></i>
+                    </div>
+                    <figcaption class="media-body">
+                        <h6 class="title text-truncate">Titulo</h6>
+                    </figcaption>
+                </figure> 
+            </td>
+            <td> 
+                <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>	
+                    <option>3</option>	
+                    <option>4</option>	
+                </select> 
+            </td>
+            <td> 
+                <div class="price-wrap" id="preco"> 
+                    <var class="price">R$ 145,00</var> 
+                    <small class="text-muted">(145,00 cada)</small> 
+                </div> 
+            </td>
+            <td> 
+                <div class="price-wrap" id="total"> 
+                    <var class="price bg-warning">R$ 145,00</var> 
+                </div> 
+            </td>
+            <td class="text-right"> 
+                <a href="#" class="btn btn-outline-success mr-3" data-toggle="tooltip" data-original-title="Comprar"><i class="fa fa-check"></i> </a> 
+                <a href="#" class="btn btn-outline-danger"> × </a>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+</div> <!-- fim dos produtos comprados// -->
+
+
+<!-- Fechamento da compra -->
+<div class="jumbotron p-0 mt-3">
+    <div>
+        <p class="border border-success">
+            <b class="mr-5">Subtotal:</b>
+            <span>R$ 145,00</span>
+        </p>
+    </div>
+    <div>
+        <p class="border border-success">
+            <b class="mr-5">Frete:</b>
+            <span>R$ 30,00</span>
+            <span class="ml-2" style="font-size: 10px;"><small>**Frete com valor único para todo país</small></span>
+        </p>
+        
+    </div>
+    <div>
+        <p class="border border-success">
+            <b class="mr-5">TOTAL:</b>
+            <span class="bg-light"><strong>$ 175,00</strong></span>
+        </p>
+    </div>
+</div>
+
+<!-- Botões finais -->
+<div class="d-flex justify-content-around">
+    <span class="btn btn-default btn-lg border border-dark" href="/">
+        Continuar comprando
+    </span>
+    <span class="btn btn-danger btn-lg">
+        <i class="fas fa-flag mr-2"></i>Finalizar compra
+    </span>
+</div>

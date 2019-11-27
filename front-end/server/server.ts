@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
 router.get('/exibir/:ISBN?', (req, res) => {
     let uniqueFilter = '';
     uniqueFilter = 'WHERE ISBN = 0321344758;'
-    execSQLQuery('SELECT ISBN, title, description, price, publisher, pubdate, edition, pages FROM bookdescriptions '+ uniqueFilter, res);
+    execSQLQuery('SELECT ISBN, title, substr(description, 3, 345) as description, price, publisher, pubdate, edition, pages FROM bookdescriptions '+ uniqueFilter, res);
 });
 
 
